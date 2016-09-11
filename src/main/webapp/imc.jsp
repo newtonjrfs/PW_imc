@@ -46,17 +46,30 @@ System.out.println(e);
 }
 int imc = peso / (altura*altura);
 
-if(sexoStr == "masculino"){
-	if (imc == 0) {
-		  %><b>Informe uma idade válida.</b><%
-		} else if (imc > 0 && imc < 19,1) {
-		  %><b>Menor de idade.</b><%
-		} else if() {
-		  %><b>Maior de idade.</b><%
-		}else if() {
-		%><b>Maior de idade.</b><%
+if(sexoStr == "feminino"){
+	if (imc > 0 && imc < 19.1) {
+		  %><b>Abaixo do peso</b><%
+		} else if (imc > 19.1 && imc < 25.8) {
+		  %><b>No peso normal</b><%
+		} else if(imc > 25.8 && imc < 27.3 ) {
+		  %><b>Marginalmente acima do peso</b><%
+		}else if(imc > 27.3 && imc < 32.3) {
+		%><b>Acima do peso ideal</b><%
 		}else {
-			
+			%><b>Obeso</b><%
+		}
+		
+}else if(sexoStr == "masculino"){
+	if (imc > 0 && imc < 20.7) {
+		  %><b>Abaixo do peso</b><%
+		} else if (imc > 20.7 && imc < 26.4) {
+		  %><b>No peso normal</b><%
+		} else if(imc > 26.4 && imc < 27.8 ) {
+		  %><b>Marginalmente acima do peso</b><%
+		}else if(imc > 27.8 && imc < 31.1) {
+		%><b>Acima do peso ideal</b><%
+		}else {
+			%><b>Obeso</b><%
 		}
 		
 }
