@@ -30,7 +30,7 @@ String alturaStr = request.getParameter("altura");
 alturaStr = (alturaStr == null ? "0" : alturaStr);
 int altura = 0;
 try {
-idade = Integer.parseInt(alturaStr);
+altura = Integer.parseInt(alturaStr);
 } catch(Exception e) {
 System.out.println(e);
 }
