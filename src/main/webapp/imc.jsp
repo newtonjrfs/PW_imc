@@ -28,23 +28,29 @@ System.out.println(e);
 String alturaStr = request.getParameter("altura");
 //Se o campo "altura" não foi informado, atribui "0", senão fica como está.
 alturaStr = (alturaStr == null ? "0" : alturaStr);
-int altura = 0;
+float altura = 0;
+float imc = 0;
 try {
-altura = Integer.parseInt(alturaStr);
+altura = Integer.parsefloat(alturaStr);
+float imc = peso / (altura*altura);
 } catch(Exception e) {
 System.out.println(e);
 }
 
 String sexoStr = request.getParameter("sexo");
 //Se o campo "sexo" não foi informado, atribui "0", senão fica como está.
-sexoStr = (sexoStr == null ? "0" : (sexoStr == "masculino" ? sexoStr : (sexoStr == "feminino" ? sexoStr : "0")));
+
+sexoStr = (sexoStr == null ? "0" : sexoStr);
+sexoStr = (sexoStr == "masculino" ? "masculino" : sexoStr);
+sexoStr = (sexoStr == "feminino" ? "feminino" : sexoStr);
+
 int sexo = 0;
 try {
 sexo = Integer.parseInt(sexoStr);
 } catch(Exception e) {
 System.out.println(e);
 }
-int imc = peso / (altura*altura);
+
 
 if(sexoStr == "feminino"){
 	if (imc > 0 && imc < 19.1) {
